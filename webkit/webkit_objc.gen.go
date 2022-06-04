@@ -1,7 +1,7 @@
 package webkit
 
 import (
-	cocoa "github.com/progrium/macdriver/cocoa"
+	cocoa "github.com/bob620/macdriver/cocoa"
 	core "github.com/progrium/macdriver/core"
 	"github.com/progrium/macdriver/objc"
 	"unsafe"

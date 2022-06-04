@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/progrium/macdriver/cocoa"
+	"github.com/bob620/macdriver/cocoa"
 )
 
 func init() {

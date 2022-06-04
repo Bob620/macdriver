@@ -2,7 +2,7 @@ package cocoa_test
 
 import (
 	"fmt"
-	"github.com/progrium/macdriver/cocoa"
+	"github.com/bob620/macdriver/cocoa"
 	"io/ioutil"
 	"log"
 )
