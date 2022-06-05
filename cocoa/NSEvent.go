@@ -66,6 +66,15 @@ const (
 	NSEventTypeDirectTouch        = 37
 	NSEventTypeChangeMode         = 38
 
+	NSEventSubTypeWindowExposed          = 0
+	NSEventSubTypeApplicationActivated   = 1
+	NSEventSubTypeApplicationDeactivated = 2
+	NSEventSubTypeTouch                  = 3
+	NSEventSubTypeWindowMoved            = 4
+	NSEventSubTypeScreenChanged          = 8
+
+	NSEventSubTypePowerOff = 1
+
 	NSEventMaskLeftMouseDown      uint64 = 1 << NSEventTypeLeftMouseDown
 	NSEventMaskLeftMouseUp        uint64 = 1 << NSEventTypeLeftMouseUp
 	NSEventMaskRightMouseDown     uint64 = 1 << NSEventTypeRightMouseDown
@@ -127,6 +136,9 @@ func (e NSEvent) KeyCode() (int64, error) {
 }
 func (e NSEvent) Type() int64 {
 	return e.Get("type").Int()
+}
+func (e NSEvent) SubType() int64 {
+	return e.Get("subtype").Int()
 }
 func (e NSEvent) Characters() (string, error) {
 	eventType := e.Type()
